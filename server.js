@@ -122,13 +122,6 @@ app.use('/:itemId/', express.static(path.join(__dirname, 'public')));
 // );
 
 // Reviews
-app.use(
-  '/:itemId/',
-  proxy({
-    target:'http://18.191.151.243:3003',
-    changeOrigin: true
-  })
-);
 
 app.use(
   '/post',
