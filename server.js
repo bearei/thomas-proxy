@@ -11,68 +11,33 @@ console.log(path.join(__dirname, 'public'));
 app.use(morgan('dev'));
 app.use('/:itemId/', express.static(path.join(__dirname, 'public')));
 
-// app.use(
-//   '/:itemId',
-//   proxy({
-//     target:'http://18.191.151.243:3003',
-//     changeOrigin: true
-//   })
-// );
-// app.use(
-//   '/:itemId',
-//   proxy({
-//     target:'http://127.0.0.1:8081',
-//     changeOrigin: true
-//   })
-// );
-// app.use(
-//   '/:itemId',
-//   proxy({
-//     target:'http://127.0.0.1:3003',
-//     changeOrigin: true
-//   })
-// );
 
-// // Product Options
-// app.use(
-//   '/:itemId',
-//   proxy({
-//     target:'http://localhost:3001',
-//     changeOrigin: true
-//   })
-// );
+// Product Options
 
-// app.use(
-//   '/products/random',
-//   proxy({
-//     target:'http://localhost:3001',
-//     changeOrigin: true
-//   })
-// );
 
-// app.use(
-//   '/products/:itemId',
-//   proxy({
-//     target:'http://localhost:3001',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/products/:itemId',
+  proxy({
+    target:'http://3.82.213.114:3001/',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/variants/:itemId',
-//   proxy({
-//     target:'http://localhost:3001',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/variants/:itemId',
+  proxy({
+    target:'http://3.82.213.114:3001/',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/products',
-//   proxy({
-//     target:'http://localhost:3001',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/products',
+  proxy({
+    target:'http://3.82.213.114:3001/',
+    changeOrigin: true
+  })
+);
 
 // // Related Items and Size Chart
 // app.use(
