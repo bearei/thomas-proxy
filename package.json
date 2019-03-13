@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js",
+    "start": "node ./server.js",
+    "devstart": "nodemon ./server.js",
     "connect": "ssh -i 'thomhsu_es2_key.pem' ec2-user@ec2-3-18-107-205.us-east-2.compute.amazonaws.com"
   },
   "keywords": [],
