@@ -9,13 +9,13 @@ const proxy = require('http-proxy-middleware');
 app.use(morgan('dev'));
 app.use('/:itemId/', express.static(path.join(__dirname, 'public')));
 
-app.use(
-  '/:itemId',
-  proxy({
-    target:'http://18.191.151.243:3003',
-    changeOrigin: true
-  })
-);
+// app.use(
+//   '/:itemId',
+//   proxy({
+//     target:'http://18.191.151.243:3003',
+//     changeOrigin: true
+//   })
+// );
 // app.use(
 //   '/:itemId',
 //   proxy({
@@ -121,62 +121,62 @@ app.use(
 //   })
 // );
 
-// // Reviews
-// app.use(
-//   '/:itemId/',
-//   proxy({
-//     target:'http://localhost:3003',
-//     changeOrigin: true
-//   })
-// );
+// Reviews
+app.use(
+  '/:itemId/',
+  proxy({
+    target:'http://18.191.151.243:3003',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/post',
-//   proxy({
-//     target:'http://localhost:3003',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/post',
+  proxy({
+    target:'http://18.191.151.243:3003',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/items/:itemId',
-//   proxy({
-//     target:'http://localhost:3003',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/items/:itemId',
+  proxy({
+    target:'http://18.191.151.243:3003',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/reviews/helpful/:reviewId',
-//   proxy({
-//     target:'http://localhost:3003',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/reviews/helpful/:reviewId',
+  proxy({
+    target:'http://18.191.151.243:3003',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/reviews/notHelpful/:reviewId',
-//   proxy({
-//     target:'http://localhost:3003',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/reviews/notHelpful/:reviewId',
+  proxy({
+    target:'http://18.191.151.243:3003',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/reviews/flag/:reviewId',
-//   proxy({
-//     target:'http://localhost:3003',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/reviews/flag/:reviewId',
+  proxy({
+    target:'http://18.191.151.243:3003',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/reviews/',
-//   proxy({
-//     target:'http://localhost:3003',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/reviews/',
+  proxy({
+    target:'http://18.191.151.243:3003',
+    changeOrigin: true
+  })
+);
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
