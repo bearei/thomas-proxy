@@ -33,3 +33,6 @@ bundle.js
 
 # New Relic
 newrelic.js
+
+# AWS
+*.pem
