@@ -128,7 +128,7 @@ app.use('/:itemId/', express.static(path.join(__dirname, 'public')));
 app.use(
   '/post',
   proxy({
-    target:'http://18.191.151.243:3003',
+    target:'http://18.188.163.54:3003',
     changeOrigin: true
   })
 );
@@ -136,7 +136,7 @@ app.use(
 app.use(
   '/items/:itemId',
   proxy({
-    target:'http://18.191.151.243:3003',
+    target:'http://18.188.163.54:3003',
     changeOrigin: true
   })
 );
@@ -144,7 +144,7 @@ app.use(
 app.use(
   '/reviews/helpful/:reviewId',
   proxy({
-    target:'http://18.191.151.243:3003',
+    target:'http://18.188.163.54:3003',
     changeOrigin: true
   })
 );
@@ -152,7 +152,7 @@ app.use(
 app.use(
   '/reviews/notHelpful/:reviewId',
   proxy({
-    target:'http://18.191.151.243:3003',
+    target:'http://18.188.163.54:3003',
     changeOrigin: true
   })
 );
@@ -160,7 +160,7 @@ app.use(
 app.use(
   '/reviews/flag/:reviewId',
   proxy({
-    target:'http://18.191.151.243:3003',
+    target:'http://18.188.163.54:3003',
     changeOrigin: true
   })
 );
@@ -168,7 +168,7 @@ app.use(
 app.use(
   '/reviews/',
   proxy({
-    target:'http://18.191.151.243:3003',
+    target:'http://18.188.163.54:3003',
     changeOrigin: true
   })
 );
