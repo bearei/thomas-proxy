@@ -6,6 +6,8 @@ const port = process.env.PORT || 3000;
 const proxy = require('http-proxy-middleware');
 // require('newrelic');
 
+console.log(path.join(__dirname, 'public'));
+
 app.use(morgan('dev'));
 app.use('/:itemId/', express.static(path.join(__dirname, 'public')));
 
