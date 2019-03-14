@@ -39,54 +39,54 @@ app.use(
   })
 );
 
-// // Related Items and Size Chart
-// app.use(
-//   '/:itemId',
-//   proxy({
-//     target:'http://localhost:8081',
-//     changeOrigin: true
-//   })
-// );
+// Related Items and Size Chart
+app.use(
+  '/:itemId',
+  proxy({
+    target:'18.224.19.41:3010',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/delete/:id',
-//   proxy({
-//     target:'http://localhost:8081',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/delete/:id',
+  proxy({
+    target:'18.224.19.41:3010',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/update/:id',
-//   proxy({
-//     target:'http://localhost:8081',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/update/:id',
+  proxy({
+    target:'18.224.19.41:3010',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/post',
-//   proxy({
-//     target:'http://localhost:8081',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/post',
+  proxy({
+    target:'18.224.19.41:3010',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/api/sizechart',
-//   proxy({
-//     target:'http://localhost:8081',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/api/sizechart',
+  proxy({
+    target:'18.224.19.41:3010',
+    changeOrigin: true
+  })
+);
 
-// app.use(
-//   '/api/pavs/:id',
-//   proxy({
-//     target:'http://localhost:8081/',
-//     changeOrigin: true
-//   })
-// );
+app.use(
+  '/api/pavs/:id',
+  proxy({
+    target:'18.224.19.41:3010/',
+    changeOrigin: true
+  })
+);
 
 // Reviews
 
