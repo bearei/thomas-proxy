@@ -9,7 +9,7 @@ const proxy = require('http-proxy-middleware');
 console.log(path.join(__dirname, 'public'));
 
 app.use(morgan('dev'));
-app.use('loaderio-598a9fae845a8e187db547d6b6c16e66/', express.static(path.join(__dirname, 'loaderio')));
+app.use('/', express.static(path.join(__dirname, 'loaderio')));
 app.use('/:itemId/', express.static(path.join(__dirname, 'public')));
 
 
