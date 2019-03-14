@@ -91,7 +91,7 @@ app.use(
   })
 );
 app.use(
-  '/post',
+  '/post-review',
   proxy({
     target:'http://52.15.132.177:3004',
     changeOrigin: true
