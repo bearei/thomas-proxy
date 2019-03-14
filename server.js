@@ -9,8 +9,8 @@ const proxy = require('http-proxy-middleware');
 console.log(path.join(__dirname, 'public'));
 
 app.use(morgan('dev'));
-app.use('/', express.static(path.join(__dirname, 'loaderio')));
-app.use('shopping/:itemId/', express.static(path.join(__dirname, 'public')));
+// app.use('/', express.static(path.join(__dirname, 'loaderio')));
+app.use('/:itemId', express.static(path.join(__dirname, 'public')));
 
 
 // Product Options
