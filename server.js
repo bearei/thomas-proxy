@@ -18,7 +18,7 @@ app.use('/:itemId/', express.static(path.join(__dirname, 'public')));
 app.use(
   '/products/:itemId',
   proxy({
-    target:'http://3.82.213.114:3001/',
+    target:'http://3.95.173.198:3001/',
     changeOrigin: true
   })
 );
@@ -26,7 +26,7 @@ app.use(
 app.use(
   '/variants/:itemId',
   proxy({
-    target:'http://3.82.213.114:3001/',
+    target:'http://3.95.173.198:3001/',
     changeOrigin: true
   })
 );
@@ -34,7 +34,7 @@ app.use(
 app.use(
   '/products',
   proxy({
-    target:'http://3.82.213.114:3001/',
+    target:'http://3.95.173.198:3001/',
     changeOrigin: true
   })
 );
