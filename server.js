@@ -40,13 +40,6 @@ app.use(
 );
 
 // Related Items and Size Chart
-app.use(
-  '/:itemId',
-  proxy({
-    target:'http://18.224.19.41:3010',
-    changeOrigin: true
-  })
-);
 
 app.use(
   '/delete/:id',
