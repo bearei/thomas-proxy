@@ -9,13 +9,12 @@ require('newrelic');
 console.log(path.join(__dirname, 'public'));
 
 app.use(morgan('dev'));
-app.use('/', express.static(path.join(__dirname, 'loaderio')));
-app.use('/shopping/:itemId', express.static(path.join(__dirname, 'public')));
+
+app.use('/shopping/:itemId/', express.static(`${__dirname}/../public`));
+app.use('/', express.static(`${__dirname}/../loaderio`));
 
 
 // Product Options
-
-
 app.use(
   '/products/:itemId',
   proxy({
@@ -131,6 +130,11 @@ app.use(
     changeOrigin: true
   })
 );
+
+
+app.use(parser.json());
+app.use(parser.urlencoded({ extended: true }));
+
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
