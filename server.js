@@ -4,13 +4,13 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 const proxy = require('http-proxy-middleware');
-// require('newrelic');
+require('newrelic');
 
 console.log(path.join(__dirname, 'public'));
 
 app.use(morgan('dev'));
-// app.use('/', express.static(path.join(__dirname, 'loaderio')));
-app.use('/:itemId', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'loaderio')));
+app.use('/shop/:itemId', express.static(path.join(__dirname, 'public')));
 
 
 // Product Options
