@@ -45,7 +45,7 @@ app.use(
 app.use(
   '/delete/:id',
   proxy({
-    target:'http://18.224.19.41:3010',
+    target:'http://18.224.184.136:3008',
     changeOrigin: true
   })
 );
@@ -53,7 +53,7 @@ app.use(
 app.use(
   '/update/:id',
   proxy({
-    target:'http://18.224.19.41:3010',
+    target:'http://18.224.184.136:3008',
     changeOrigin: true
   })
 );
@@ -61,7 +61,7 @@ app.use(
 app.use(
   '/post',
   proxy({
-    target:'http://18.224.19.41:3010',
+    target:'http://18.224.184.136:3008',
     changeOrigin: true
   })
 );
@@ -69,7 +69,7 @@ app.use(
 app.use(
   '/api/sizechart',
   proxy({
-    target:'http://18.224.19.41:3010',
+    target:'http://18.224.184.136:3008',
     changeOrigin: true
   })
 );
@@ -77,7 +77,7 @@ app.use(
 app.use(
   '/api/pavs/:id',
   proxy({
-    target:'http://18.224.19.41:3010/',
+    target:'http://18.224.184.136:3008/',
     changeOrigin: true
   })
 );
