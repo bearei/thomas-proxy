@@ -11,8 +11,8 @@ console.log(path.join(__dirname, 'public'));
 
 app.use(morgan('dev'));
 
-app.use('/shopping/:itemId/', express.static(`${__dirname}/../public`));
-app.use('/', express.static(`${__dirname}/../loaderio`));
+app.use('/shopping/:itemId/', express.static(`${__dirname}/public`));
+app.use('/', express.static(`${__dirname}/loaderio`));
 
 
 // Product Options
