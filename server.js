@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 const morgan = require('morgan');
 const parser = require('body-parser');
@@ -5,7 +6,6 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 const proxy = require('http-proxy-middleware');
-require('newrelic');
 
 console.log(path.join(__dirname, 'public'));
 
