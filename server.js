@@ -59,7 +59,7 @@ app.use(
 );
 
 app.use(
-  '/post',
+  '/api/post',
   proxy({
     target:'http://18.224.184.136:3008',
     changeOrigin: true
